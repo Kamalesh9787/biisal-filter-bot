@@ -131,12 +131,12 @@ async def start(client:Client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.NEW_USER_TXT.format(temp.B_LINK, message.from_user.id, message.from_user.mention))
         try: 
-            refData = message.command[0]
-            if refData and refData.split("-", 1)[0] == "biisal":
-                Fullref = refData.split("-", 1)
-                refUserId = int(Fullref[1])
-                await db.update_point(refUserId)
-                newPoint = await db.get_point(refUserId)
+         #   refData = message.command[1]
+         #   if refData and refData.split("-", 1)[0] == "Jisshu":
+         #       Fullref = refData.split("-", 1)
+         #       refUserId = int(Fullref[1])
+         #       await db.update_point(refUserId)
+         #       newPoint = await db.get_point(refUserId)
                 if AUTH_CHANNEL and await is_req_subscribed(client, message):
                         buttons = [[
                             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
