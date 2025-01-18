@@ -137,7 +137,7 @@ async def start(client:Client, message):
          #       refUserId = int(Fullref[1])
          #       await db.update_point(refUserId)
          #       newPoint = await db.get_point(refUserId)
-                if AUTH_CHANNEL and await is_req_subscribed(client, message):
+             if AUTH_CHANNEL and await is_req_subscribed(client, message):
                         buttons = [[
                             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
                             ],[
